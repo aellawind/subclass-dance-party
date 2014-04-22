@@ -3,11 +3,13 @@ body, html{
 }
 body{
   margin: 0px;
-  background-color:#444;
+  /*background-color:#444;*/
+  background:black url('./galaxy.jpg') 0 0;
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
+  font-family:'Helvetica Neue', sans-serif;
 }
 .title, .addDancerButton{
   padding:5px 12px;
@@ -24,4 +26,69 @@ body, a:link, a:visited, a:active{
   border:10px solid red;
   border-radius:10px;
   position:absolute;
+}
+
+.tiny {
+  border-width:2px;
+  border-color: white;
+}
+
+a.btn {
+  display: inline-block;
+  background: rgba(0,0,0,0.3);
+  padding: 10px 15px;
+  border-radius: 3px;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  margin: 20px;
+  float: right;
+}
+
+a.btn.selected {
+  background: rgba(255,255,255,0.3);
+  color: black;
+}
+
+.blackhole {
+  display: inline-block;
+  background: transparent url('./blackhole.png') center center;
+  width: 200px;
+  height: 200px;
+  border: none;
+  background-size: cover;
+}
+
+@-webkit-keyframes spinnerRotate
+{
+    from{-webkit-transform:rotate(0deg);}
+    to{-webkit-transform:rotate(360deg);}
+}
+@-moz-keyframes spinnerRotate
+{
+    from{-moz-transform:rotate(0deg);}
+    to{-moz-transform:rotate(360deg);}
+}
+@-ms-keyframes spinnerRotate
+{
+    from{-ms-transform:rotate(0deg);}
+    to{-ms-transform:rotate(360deg);}
+}
+
+.spin {
+    position:fixed;
+    top:2%;
+    left:0%;
+    -webkit-animation-name: spinnerRotate;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spinnerRotate;
+    -moz-animation-duration: 5s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spinnerRotate;
+    -ms-animation-duration: 5s;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
 }
